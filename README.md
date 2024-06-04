@@ -193,4 +193,4 @@ IoT 개발자과정 ASP.NET 리포지토리
 
 
 
-        <img src="https://raw.githubusercontent.com/been2525/basic-aspnet-2024/main/image/an001.png" width="800">
+        <img src="https://raw.githubusercontent.com/been2525/basic-aspnet-2024/main/image/an001.png" width="730" alt="Codehal 로그인창 따라하기>
