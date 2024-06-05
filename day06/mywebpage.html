@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- CSS -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30xp 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #359381;
+            pointer-events: none;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #359381;
+            padding: 6px 15px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            background: #359381;
+            color: #fff;
+        }
+
+        .parallax {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #text {
+            position: absolute;
+            font-size: 5em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 5:33-->
+    <header>
+        <h2 class="logo">Logo</h2>
+        <img src="./images/hill1.png" id="hill1">
+        <img src="./images/hill2.png" id="hill2">
+        <img src="./images/hill3.png" id="hill3">
+        <img src="./images/hill4.png" id="hill4">
+        <img src="./images/hill5.png" id="hill5">
+        <img src="./images/tree.png" id="tree">
+        <img src="./images/leaf.png" id="leaf">
+        <img src="./images/plant.png" id="plant">
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="parallax">
+        <h2 id="text">Parallax Website</h2>
+    </section>
+</body>
+</html>
