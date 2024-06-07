@@ -215,3 +215,8 @@ IoT 개발자과정 ASP.NET 리포지토리
 ## 7일차
 - HTML + CSS 응용
     - 웹페이지 클로닝
+ 
+
+    https://github.com/been2525/basic-aspnet-2024/assets/130003854/e0bd0ee4-ba30-4a7c-ba0c-4fc779b0a909
+
+
