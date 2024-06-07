@@ -28,7 +28,7 @@
             width: 100%;
             padding: 30xp 100px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             z-index: 100;
         }
@@ -37,6 +37,8 @@
             font-size: 2em;
             color: #359381;
             pointer-events: none;
+            margin-right: 270px;
+            margin-left: 100px;
         }
 
         .navigation a {
@@ -65,22 +67,40 @@
         #text {
             position: absolute;
             font-size: 5em;
-            color: #333;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .parallax img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .sec {
+            position: relative;
+            background: #003329;
+            padding: 100px;
+        }
+
+        .sec h2 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .sec p {
+            font-size: 1em;
+            color: #fff;
+            font-weight: 300;
         }
     </style>
 </head>
 <body>
-    <!-- 5:33-->
     <header>
         <h2 class="logo">Logo</h2>
-        <img src="./images/hill1.png" id="hill1">
-        <img src="./images/hill2.png" id="hill2">
-        <img src="./images/hill3.png" id="hill3">
-        <img src="./images/hill4.png" id="hill4">
-        <img src="./images/hill5.png" id="hill5">
-        <img src="./images/tree.png" id="tree">
-        <img src="./images/leaf.png" id="leaf">
-        <img src="./images/plant.png" id="plant">
+        
         <nav class="navigation">
             <a href="#" class="active">Home</a>
             <a href="#">About</a>
@@ -90,7 +110,44 @@
     </header>
 
     <section class="parallax">
+        <img src="./images/hill1.png" id="hill1">
+        <img src="./images/hill2.png" id="hill2">
+        <img src="./images/hill3.png" id="hill3">
+        <img src="./images/hill4.png" id="hill4">
+        <img src="./images/hill5.png" id="hill5">
+        <img src="./images/tree.png" id="tree">
         <h2 id="text">Parallax Website</h2>
+        <img src="./images/leaf.png" id="leaf">
+        <img src="./images/plant.png" id="plant">
     </section>
+
+    <section class="sec">
+        <h2>Parallax Scrolling website</h2> 
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit exercitationem repellendus ipsam eligendi quaerat. 
+            Necessitatibus quia incidunt sapiente suscipit rem facere recusandae voluptate id doloribus, ullam, cum ex fuga mollitia nisi dolores architecto! 
+            Molestiae, recusandae ea, dolorem eligendi ut quam nemo ullam porro optio iure ipsum totam. 
+            In, provident harum pariatur nemo animi sed asperiores magnam error natus fugit recusandae dignissimos esse aliquam ad labore ipsa impedit nobis! 
+            Eius officia ab ea, totam unde, quisquam eaque voluptatem non excepturi sed temporibus molestiae alias maxime. Alias eius officiis architecto perspiciatis numquam! 
+            Voluptatem accusantium, rerum asperiores, odit, facilis harum sit eum laborum minima nobis laboriosam illum! Necessitatibus omnis provident, odio at ut itaque sint quisquam repudiandae quasi.
+            Optio, maiores, dolore accusantium odio ab voluptatibus a repudiandae suscipit, quos nesciunt consectetur dolor consequatur?<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit exercitationem repellendus ipsam eligendi quaerat. 
+            Necessitatibus quia incidunt sapiente suscipit rem facere recusandae voluptate id doloribus, ullam, cum ex fuga mollitia nisi dolores architecto! 
+            Molestiae, recusandae ea, dolorem eligendi ut quam nemo ullam porro optio iure ipsum totam. 
+            In, provident harum pariatur nemo animi sed asperiores magnam error natus fugit recusandae dignissimos esse aliquam ad labore ipsa impedit nobis! 
+            Eius officia ab ea, totam unde, quisquam eaque voluptatem non excepturi sed temporibus molestiae alias maxime. Alias eius officiis architecto perspiciatis numquam! 
+            Voluptatem accusantium, rerum asperiores, odit, facilis harum sit eum laborum minima nobis laboriosam illum! Necessitatibus omnis provident, odio at ut itaque sint quisquam repudiandae quasi.
+            Optio, maiores, dolore accusantium odio ab voluptatibus a repudiandae suscipit, quos nesciunt consectetur dolor consequatur?<br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit exercitationem repellendus ipsam eligendi quaerat. 
+            Necessitatibus quia incidunt sapiente suscipit rem facere recusandae voluptate id doloribus, ullam, cum ex fuga mollitia nisi dolores architecto! 
+            Molestiae, recusandae ea, dolorem eligendi ut quam nemo ullam porro optio iure ipsum totam. 
+            In, provident harum pariatur nemo animi sed asperiores magnam error natus fugit recusandae dignissimos esse aliquam ad labore ipsa impedit nobis! 
+            Eius officia ab ea, totam unde, quisquam eaque voluptatem non excepturi sed temporibus molestiae alias maxime. Alias eius officiis architecto perspiciatis numquam! 
+            Voluptatem accusantium, rerum asperiores, odit, facilis harum sit eum laborum minima nobis laboriosam illum! Necessitatibus omnis provident, odio at ut itaque sint quisquam repudiandae quasi.
+            Optio, maiores, dolore accusantium odio ab voluptatibus a repudiandae suscipit, quos nesciunt consectetur dolor consequatur?<br><br>
+        </p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
