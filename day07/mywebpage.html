@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Animated Website using HTML & CSS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- CSS -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #fff;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 8%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            position: relative;
+            font-size: 25px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .navbar {
+            position: relative;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+            margin: 0 20px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #42c1e8;
+        }
+         .home {
+            width: 100%;
+            height: 100vh;
+            background: url('./img.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 50px 8% 0;
+         }
+
+         .home-content {
+            max-width: 630px;
+         }
+
+         .home-content h1 {
+            position: relative;
+            font-size: 45px;
+            line-height: 1.2;
+         }
+
+         .home-content h1:nth-child(3) {
+            background: linear-gradient(#59ffff, #1952ab);
+            -webkit-background-clip: text;
+            color: transparent;
+         }
+
+         .home-content p {
+            position: relative;
+            font-size: 16px;
+            margin: 25px 0 30px;
+         }
+
+        .home-content .btn-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 345px;
+        }
+
+        .btn {
+            padding: 10px 28px;
+            background: #42c1e8;
+            border: 2px solid #42c1e8;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #01003f;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .btn-box .btn:nth-child(2) {
+            background: transparent;
+            color: #42c1e8;
+            transition: 0.5s;
+        }
+
+        .btn-box .btn:nth-child(2):hover {
+            background: #42c1e8;
+            color: #01003f;
+        }
+
+        .btn.sign-up {
+            position: relative;
+            border: none;
+        }
+
+        .animate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: #01003f;
+            animation: show-right 1s ease-out forwards;
+            animation-delay: calc(0.3s * var(--i));
+        }
+
+        .animate.bg {
+            animation: fade-in 1s ease-out forwards;
+            animation-delay: 3.2s
+        }
+
+        @keyframes show-right {
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes fade-in {
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Crypo.<span class="animate" style="--i:1;"></span></a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Pricing</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <span class="animate" style="--i:2;"></span>
+        </nav>
+
+        <a href="#" class="btn sign-up">Sign Up<span class="animate" style="--i:3;"></span></a>
+    </header>
+
+    <section class="home">
+        <span class="animate bg"></span>
+        <div class="home-content">
+            <h1>The Next Generation<span class="animate" style="--i:4;"></span></h1>
+            <h1>Decetralized<span class="animate" style="--i:5;"></span></h1>
+            <h1>Cryptocurrency<span class="animate" style="--i:6;"></span></h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, corporis atque. Sed enim velit laudantium deserunt! Eaque modi ipsum autem hic quasi delectus minima cum ipsa similique laboriosam.<span class="animate" style="--i:7;"></span></p>
+            <div class="btn-box">
+                <a href="#" class="btn">Get Started</a>
+                <a href="#" class="btn">Learn More</a>
+                <span class="animate" style="--i:8;"></span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
