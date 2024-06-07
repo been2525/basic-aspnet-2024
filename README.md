@@ -210,6 +210,10 @@ IoT 개발자과정 ASP.NET 리포지토리
     - 웹페이지 클로닝
 
 
+
+    https://github.com/been2525/basic-aspnet-2024/assets/130003854/24c93682-3af2-4b7f-9995-65a36d3eaee7
+
+
     
 
 ## 7일차
