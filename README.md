@@ -223,7 +223,7 @@ IoT 개발자과정 ASP.NET 리포지토리
 
     https://github.com/been2525/basic-aspnet-2024/assets/130003854/e0bd0ee4-ba30-4a7c-ba0c-4fc779b0a909
 
-## 9일차
+## 8일차
 - ASP.NET
     - ASP.NET 역사
         - 1990년대 MS가 웹 서버기술로 ASP(Active Server Page) -> JSP(Java Server Page)
@@ -279,3 +279,37 @@ IoT 개발자과정 ASP.NET 리포지토리
         - 액션이 발생한 이후 처리하는 메서드의 결과를 ActionResult
         - 콘솔 서버로그 잘 확인할 것, 프로세스가 종료되면 웹사이트가 실행안됨
 
+    - 데이터베이스 연동방법
+        - DB first - 가장 전통적인 DB 연동방식. DB설계, DB구축 C#과 연동
+        - Code first - 최근 트렌드가 되는 DB 연동방식. C# 엔티티 클래스 작성, DB연결 설정 후 실행하면 DB에 테이블이 생성
+        - EntityFramework를 사용하면 아주 손쉽게 구축가능. DB를 잘 모르고 C#, ASP.NET만 알아도 DB를 핸들링 가능
+
+    - EntityFramework(Core) 설치
+        - Microsoft.EntityFrameworkCore
+        - Microsoft.EntityFrameworkCore.Tools
+        - Microsoft.EntityFrameworkCore.SqlServer
+
+    - Code first 구현순서
+        - ASP.NET 프로젝트 생성
+        - EF 패키지 설치
+        - 엔티티 클래스 작성
+        - appsetting.json에 DB연결문자열 추가
+        - Data/ApplicationDbContext.cs 중간연결 클래스 생성
+        - Program.cs Services 내에 DbContext 종속성을 주입
+        - NuGet 패키지 관리자 > 패키지 관리자 콘솔 실행
+            ```shell
+            PM> Add-Migration 마이크레이션명
+            Build started...
+            Build succeeded.
+            ...
+            PM> Update-Database
+            ...
+            Done.
+            ```
+
+## 9일차 (07.22)
+- ASP.NET Core MVC
+    - 필요 이론
+    - 연습
+    - 개인 포토폴리오 웹사이트
+    - Bootstrap 테마 적용
