@@ -10,6 +10,7 @@ using BasicDbHandling.Models;
 
 namespace BasicDbHandling.Controllers
 {
+    // Views/Category 폴더 필요
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,6 +21,7 @@ namespace BasicDbHandling.Controllers
         }
 
         // GET: Category
+        // Index.cshtml 웹퍼이지 파일 필요
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());
