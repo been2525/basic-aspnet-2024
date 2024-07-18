@@ -335,3 +335,55 @@ IoT 개발자과정 ASP.NET 리포지토리
     3. wwwroot 폴더 밑에 템플릿 html, css, js, 이미지등 위치
     4. 템플릿 페이지에 공통적인 부분(Header, Buttom)은 _layout.cshtml에 위치
     5. 중간에 페이지마다 변경되는 부분은 각 Views 밑에 포함
+    6. _layout.cshtml 에 공통부분 옮기기
+    7. index.cshtml에 index.html에서 공통부분 외 영역 옮기기
+    8. index.cshtml 내용 수정
+
+    9. ResumeController.cs 생성, DB관련된 설정이 없으면 모델, 뷰를 만들기 어려움
+    10. Resume 란 폴더가 Views 아래에 만듦. Index.cshtml
+    11. resume.html에 네비게이션 아래 변경부분만 복사해서 index.cshtml에 붙여넣기
+    12. Project, Contact도 동일하게 적용
+
+    13. Code First방식으로 Board테이블 생성
+    14. NuGet 패키지에서 Microsoft.EntityFrameworkCore 패키지 검색, 설치
+    15. Microsoft.EntityFrameworkCore.Tools 검색, 설치
+    16. Microsoft.EntityFrameworkCore.SqlServer 검색, 설치
+    17. Models/Board.cs 로 엔티티 클래스 생성
+    18. appsettings.json 에 DB 연결문자열 추가
+    19. Data/AppDbContext.cs 생성
+    20. Program.cs 에 DbContext 종속성 주입
+    21. NuGet패키지 관리자 콘솔 > Add-Migration, Update-Database 진행
+    22. _layout.cshtml Board 링크 수정
+    23. /Controller/BoardController.cs를 생성(모델, 뷰 연결)
+        - Entity Framework를 사용하며 뷰가 포함된 MVC컨트롤러
+
+    <img src="https://raw.githubusercontent.com/hugoMGSung/basic-aspnet-2024/main/image/an0004.png" width="500">
+
+## 10일차 
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. Board.cs 멤버속성 ModeDate -> ModDate
+        - BoardController.cs 에서 ModeDate -> ModDate 변경
+        - View/Board/*.cstml  ModeDate -> ModDate 변경
+    2. ASP.NET Core 템플릿으로 만들어주는 CRUD(Insert, Select, Update, Delete)
+    3. 테이블 삭제, 재성성
+    4. 게시판 관련된 화면 수정작업
+        - Views/Board/Index.cshtml 게시판 리스트화면 수정
+        - index.cshtml 테이블 툴 변경, 삭제, 수정, 상세버튼 삭제
+        - Models/Board.cs에 테이블 한글이름 추가 DisplayName()
+        - Views/Board/Details.cshtml 부트스트랩 적용
+        - 수정, 삭제 등 버튼 디자인적용
+    5. SSMS에서 Board테이블 Hit, RegDate, ModDate Null허용으로 변경
+    6. 웹사이트 동작 순서
+        1. https://localhost:7154/Board/Create 링크오픈
+        2. BoardController -> Create 액션메서드
+        3. Submit -> BoardController -> Create 액션메서드 발동
+        4. Create 액션메스드 내 로직처리 DB에 데이터 입력
+        5. Models/Board.cs ModDate를 DateTime -> DateTime? 변경
+        6. Edit 동일, Create.cshtml 내용을 그대로 복사/붙여넣기 단,asp-action=edit
+
+## 11일차(07.23)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 게시글삭제!!
+    2. 페이징!!
+    3. 회원가입, 로그인....
+    4. 관리자모드/페이지
