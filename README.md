@@ -415,6 +415,14 @@ IoT 개발자과정 ASP.NET 리포지토리
                                 ) AS base
                         WHERE base.rowNum BETWEEN 1 AND 10 -- 1과 10에 10씩 더하면 다음 페이지를 조회하는 쿼리
                 ```
+    
+    
+
+https://github.com/user-attachments/assets/38f863c5-b5b6-4802-9559-3b801bc875f8
+
+
+    
+    
     5. 검색
         - FromSqlRaw() 메서드 변경
         - html 링크에 ?page=1&search=검색어 추가
