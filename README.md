@@ -441,5 +441,23 @@ https://github.com/user-attachments/assets/38f863c5-b5b6-4802-9559-3b801bc875f8
 ## 12일차
 - ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
     1. 삭제로직 수정
+        1. BroadController.cs 사용x -> BoardRestController.cs 다시생성
+        2. /Views/Details.cshtml jQuery를 작업 팝업
+        3. /Board/Index
     2. 회원가입, 로그인....
-    3. 관리자모드/페이지
+        1. /Modles/User.cs 클래스 생성
+        2. User클래스와 Board클래스간 관계형성 (virtual)
+        3. AppDbContext.cs 에 User DBset 추가
+        4. Add-Migration, Update-Database -> DB 생성
+        5. Program.cs 로그인 세션 설정
+        6. _layout.cshtml 로그인/로그아웃 메뉴 추가
+        7. HomeController.cs Login/Logout 액션메서드 작성
+        8. Login.cshtml
+        9. Register.cshtml 회원가입 페이지
+
+
+    3. 이력서, 프로젝트, 컨택트 페이지 구현하기
+    4. 관리자모드/페이지
+    5. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
+    6. AWS 라이트세일로 웹사이트 공개하기
+    7. 부트스트랩 템플릿 커스텀마이징, 자기 포토폴리오 사이트 만들기

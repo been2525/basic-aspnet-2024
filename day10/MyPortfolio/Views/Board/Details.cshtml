@@ -43,10 +43,13 @@
                 <i class="bi bi-pencil-fill"></i>
                 글 수정
             </a>
-            <a asp-controller="Board" asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">
+            @* <a asp-controller="Board" asp-action="Delete" asp-route-id="@Model?.Id" class="btn btn-danger">
                 <i class="bi bi-trash-fill"></i>
                 글 삭제
-            </a>
+            </a> *@
+            @* <a class="btn btn-danger" id="btnDelete">글 삭제</a> *@
+
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#delModal">글삭제</button>
             <a asp-controller="Board" asp-action="Index" class="btn btn btn-success">
                 <i class="bi bi-list pe-1"></i>
                 목록
@@ -56,23 +59,79 @@
 </section>
 
 @section Scripts {
+    <!-- 삭제 Modal 창 -->
+    <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="delModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="delModalLabel">삭제확인</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    삭제하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnDirectDelete">예</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아니요</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
     <script>
-        // 삭제 여부 함수
-        function confirmDelete(id) {
-            var result = confirm("삭제하시겠습니까?"); //1(true): 0(false)
+        $(document).ready(() => {
+            // html 화면이 다 렌더링되고 나면 설정들을 하겠다.
+            $('#btnDelete').click(() => {
+                var id = @Model?.Id;
+                // alert(id);
 
-            if (result) {
-                //alert(id);
-                // 삭제 POST를 실행
+                if (confirm("삭제하시겠습니까?")) { // 예를 눌렀음
+                    // alert(id + '삭제할 거임');
+                    $.ajax({
+                        url: '/api/BoardRest/' + id,
+                        type: 'DELETE',
+                        dataType: 'text',
+                        success: (data) => {
+                            window.location.href = '@Url.Action("Index")';
+                        }
+                    });
+                }
+            });
+        
+        // // 삭제 여부 함수
+        // function confirmDelete(id) {
+        //     var result = confirm("삭제하시겠습니까?"); //1(true): 0(false)
+
+        //     if (result) {
+        //         //alert(id);
+        //         // 삭제 POST를 실행
+        //         $.ajax({
+        //             //url: 'https://localhost:7154/Board/Delete/' + id 이렇게 쓰는 것은 구식방식(ip나 port번호가 바뀔때마다 변경해야)
+        //             url: '@Url.Action("Delte")/' + id, // Url.Action --> ASP.NET Core 백엔드 액션메서드 호출
+        //             type: 'POST', //POST 액션 메서드 호출
+        //             success: function (data) {
+        //                 window.location.href = '@Url.Action("Index")';
+        //             }
+        //         })
+        //     }
+        // }
+
+
+            $('#btnDirectDelete').click(() => {
+                var id = @Model?.Id;
+                // alert(id);
+                    // alert(id + '삭제할 거임');
                 $.ajax({
-                    //url: 'https://localhost:7154/Board/Delete/' + id 이렇게 쓰는 것은 구식방식(ip나 port번호가 바뀔때마다 변경해야)
-                    url: '@Url.Action("Delte")/' + id, // Url.Action --> ASP.NET Core 백엔드 액션메서드 호출
-                    type: 'POST', //POST 액션 메서드 호출
-                    success: function (data) {
+                    url: '/api/BoardRest/' + id,
+                    type: 'DELETE',
+                    dataType: 'text',
+                    success: (data) => {
                         window.location.href = '@Url.Action("Index")';
                     }
-                })
-            }
-        }
+                });
+            });
+        });
     </script>
 }
