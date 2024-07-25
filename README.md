@@ -468,6 +468,12 @@ https://github.com/user-attachments/assets/38f863c5-b5b6-4802-9559-3b801bc875f8
         4. HomeController.cs Login Post 메서드 작성
         5. Logout.Get메서드 추가
 
+
+https://github.com/user-attachments/assets/3de727d9-6754-42ef-a463-986599399694
+
+
+
+
     2. 이력서, 프로젝트, 컨택트 페이지 구현하기
     3. 관리자모드/페이지
     4. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
