@@ -445,19 +445,31 @@ https://github.com/user-attachments/assets/38f863c5-b5b6-4802-9559-3b801bc875f8
         2. /Views/Details.cshtml jQuery를 작업 팝업
         3. /Board/Index
     2. 회원가입, 로그인....
-        1. /Modles/User.cs 클래스 생성
+        1. /Models/User.cs 클래스 생성
         2. User클래스와 Board클래스간 관계형성 (virtual)
-        3. AppDbContext.cs 에 User DBset 추가
-        4. Add-Migration, Update-Database -> DB 생성
-        5. Program.cs 로그인 세션 설정
+        3. AppDbContext.cs에 User DBset추가
+        4. Add-Migration, Update-Database 실행 -> DB 생성
+        5. Program.cs에 로그인 세션 설정
         6. _layout.cshtml 로그인/로그아웃 메뉴 추가
         7. HomeController.cs Login/Logout 액션메서드 작성
-        8. Login.cshtml
-        9. Register.cshtml 회원가입 페이지
+        8. Login() 액션메서드 마우스오른쪽 버튼 뷰생성 Login.cshtml
+        9. bootstrap 사이트에서 예제 파일 다운로드
+        10. sign-in 폴더 내 index.html. sign-in.css Static경로(wwwroot) 복사
+        11. Login.cshtml을 위의 파일 참조해서 수정
+        12. HomeController.cs 에 Register() 액션메서드 작성
+        13. Register.cshtml 회원가입 페이지 생성
 
+## 13일차
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 회원가입페이지 계속...
+        1. Register.cshtml에 asp-for등 C# Razor tag로 변경
+        2. HomeController.cs Register Post 메서드 작성
+        3. Login.cshtml에 C# Razor tag로 변경
+        4. HomeController.cs Login Post 메서드 작성
+        5. Logout.Get메서드 추가
 
-    3. 이력서, 프로젝트, 컨택트 페이지 구현하기
-    4. 관리자모드/페이지
-    5. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
-    6. AWS 라이트세일로 웹사이트 공개하기
-    7. 부트스트랩 템플릿 커스텀마이징, 자기 포토폴리오 사이트 만들기
+    2. 이력서, 프로젝트, 컨택트 페이지 구현하기
+    3. 관리자모드/페이지
+    4. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
+    5. AWS 라이트세일로 웹사이트 공개하기
+    6. 부트스트랩 템플릿 커스텀마이징, 자기 포토폴리오 사이트 만들기
