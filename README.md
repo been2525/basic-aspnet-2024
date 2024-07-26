@@ -471,11 +471,45 @@ https://github.com/user-attachments/assets/38f863c5-b5b6-4802-9559-3b801bc875f8
 
 https://github.com/user-attachments/assets/3de727d9-6754-42ef-a463-986599399694
 
+## 14일차
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. AWS 라이트세일로 윈도우서버 인스턴스 만들기
+        1. 구글 AWS 라이트세일 검색
+        2. AWS 프리티어로 회원가입
+        3. AWS 라이트세일로 로그인
+        4. 루트 사용자로 로그인
+        5. 인스턴스 생성
+            - Linux/Unix는 라즈비안과 거의 동일
+            - MS Windows OS 전용 > Windows Server 2016 선택
+            - 무료 중 가장 선능이 좋은거 선택
+            - 인스턴스 확인 이름 변경
+            - 인스턴스 생성 클릭
+        6. 인스턴스 관리
+            - 관리로 진입
+            - 네트워킹 탭 > 고정 IP 연결 클릭
+            - 자신의 고정아이프
+            - Administrator
+            - 비번 확인
+        7. 원격 데스크톱 연결
+            - 컴퓨터: 고정아이피 주소
+            - Network2 Yes 클릭
+            - 서버 매니저 오픈
+            - IE Enhanced Security Config. On->Off
+            - 인터넷 익스플로러 오픈 구글
+            - 크롬 브라우저 설치
+            - FileZilla Server 검색/ 설치
+        8. 파일질라 서버 설정
+            - 메뉴 > Configure 클릭
+            - Server listners > 0.0.0.0 -> 내부 아이피로 변경
+
+        9.
 
 
+    2. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
+    3. 프로젝트 화면 DB연동하기
+    4. Contact 메일보내기(네이버 연동)
 
-    2. 이력서, 프로젝트, 컨택트 페이지 구현하기
-    3. 관리자모드/페이지
-    4. 자신 컴퓨터 IIS 서버에 웹사이트 올리기
-    5. AWS 라이트세일로 웹사이트 공개하기
-    6. 부트스트랩 템플릿 커스텀마이징, 자기 포토폴리오 사이트 만들기
+## 15일차(7.30)
+- ASP.NET Core 포트폴리오 웹사이트, MyPortfolio
+    1. 부트스트랩 템플릿 커스텀마이징, 자기 포토폴리오 사이트 만들기
+    
